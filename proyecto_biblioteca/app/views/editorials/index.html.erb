@@ -1,0 +1,20 @@
+<table>
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Pais</th>
+			<th>Telefono</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @editoriales.each do |editorial| %>
+			<tr>
+				<td><%= editorial.nombre %></td>
+				<td><%= editorial.pais %></td>
+				<td><%= editorial.telefono %></td>
+				<td><%= link_to 'Mostrar libros', editorial_books_path(editorial) %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+<br>

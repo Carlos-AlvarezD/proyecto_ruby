@@ -1,0 +1,9 @@
+<h1>Mostrar datos de Editoriales.</h1>
+<h3> Categoria:   <%= @editorial.nombre%>	</h3>
+<h3> Descripcion: <%= @editorial.pais%>	    </h3>
+<h3> Telefono:    <%= @editorial.telefono%>	</h3>
+
+<p><h2>Lista de libros que petenecen esta editorial.<h2></p>
+<% @editorial.books.each do |libro|%>
+	<h4><ul><li><%= libro.titulo %></li></ul></h4>
+<% end %>

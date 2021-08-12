@@ -1,0 +1,9 @@
+
+	<tr>
+		<td> <%= autor.nombre 		%> </td>
+		<td> <%= autor.nacionalidad %> </td>
+		<td> <%= autor.idioma 		%> </td>
+		<td> <%= link_to "Mostrar", author_path(autor), id:autor.id %> </td>
+		<td> <%= link_to "Editar", edit_author_path(autor), id:autor.id  %> </td>
+		<td> <%= link_to "Borrar", autor, method: :delete, data: {confirm:'Quieres borrar este autor?'}   %> </td>
+	</tr>

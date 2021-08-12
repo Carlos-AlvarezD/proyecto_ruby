@@ -1,0 +1,9 @@
+<%= form_for @persona do |f| %>
+	<label for="nombre">Nombre:</label>
+	<%= f.text_field :nombre, class: 'form-control' %>
+	<br>
+	<br>
+	<label for="direccion">Direccion</label>
+	<%= f.text_field :direccion %>
+	<%= f.submit "Crear" %>
+<% end %>

@@ -1,0 +1,43 @@
+<%= link_to "Crear autor", new_author_path %>
+<br>
+<br>
+<table>
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Nacionalidad</th>
+			<th>idioma</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<%= render partial: "autor" , collection: @autores %>
+	</tbody>
+</table>
+
+<!--
+<h1>Test helpers</h1>
+<%= select_tag(:languajes, options_for_select(
+		[['Ruby',1], ['Java', 2],
+		['C++', 3]]))  
+%>
+<hr>
+<% @options = @autores.map{|autor| [autor.nombre, autor.id]}%>
+<%= select_tag(:autores, options_for_select(@options))%>
+<hr>
+<strong>Helper form_with sin el modelo, solo el ejemplo</strong>
+<%= form_with model: @person do |person_form| %>
+	<%= person_form.select(:city_id) do %>
+		<% [['Lisbon',1],['Madrid',2],['Berlin', 3]
+			].each do |c| 
+		%>
+		<%= content_tag(:option, c.first, value: c.last) %>
+		<% end %>
+	<% end %>
+<% end %>
+<hr>
+<strong>Helper form_with con el modelo. Datos reales Pagina 506</strong>
+<%= form_with model: @Author do |autor_form| %>
+	<%= autor_form.collection_select(:city_id, Author.all,:id,:nombre) %>
+<% end %>
+-->

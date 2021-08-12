@@ -1,0 +1,10 @@
+<h1>Mostrar datos Categorias.</h1>
+<h3> Categoria: 	  <%= @categoria.categoria%>	  </h3>
+<h3> Descripcion:      <%= @categoria.descripcion%>	  </h3>
+
+<p><h2>Lista de libros que petenecen a la categoria.<h2></p>
+<% @categoria.books.each do |libro|%>
+	<h4><ul><li><%= libro.titulo %></li></ul></h4>
+<% end %>
+
+

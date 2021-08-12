@@ -1,0 +1,15 @@
+<h1>Mostrar datos los libros</h1>
+<h3> Nombre: 	  <%= @book.titulo%>	  </h3>
+<h3> idioma:      <%= @book.idioma%>	  </h3>
+<h3> Paginas:     <%= @book.paginas%>	  </h3>
+<h3> Descripcion: <%= @book.descripcion%> </h3>
+
+<% unless @book.author.nil? %>
+	<h3> Autor: </h3> <p> <%= @book.author.nombre%> 		  </p>
+<% end %>
+<% unless @book.category.nil? %>
+	<h3> Categoria: </h3> <p> <%= @book.category.categoria%> </p>
+<% end %>
+<% unless @book.editorial.nil? %>
+	<h3> Editorial: </h3> <p> <%= @book.editorial.nombre%>   </p>
+<% end %>

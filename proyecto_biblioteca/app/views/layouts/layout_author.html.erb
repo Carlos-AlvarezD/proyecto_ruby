@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Autores</title>
+<%= csrf_meta_tags %>
+<%= csp_meta_tag %>
+
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+  <h2>Autores</h2>
+</header>
+
+<section >
+  <%= render "menu" %>
+  
+  <article>
+    <%= yield %>
+  </article>
+  <div class="espaciador"></div>
+  
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
