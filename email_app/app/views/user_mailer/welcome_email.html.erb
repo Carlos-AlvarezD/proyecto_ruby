@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta content = 'text/html charset=UTF-8' http-equiv = 'Content-Type'>
+</head>
+<body>
+	<h1>Bienvenido a esta aplicacion, <%@user.nombre %></h1>
+	<p>
+		Te has suscrito satisfactoriamente a nuestro newsletter con usuario:
+		<%= @user.login %>.<br>
+	</p>
+	<p>
+		Recuerda que la url de nuestro sitio es: <%= @url %>
+	</p>
+</body>
+</html>
