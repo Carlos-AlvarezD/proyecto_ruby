@@ -1,0 +1,21 @@
+<h3>Anadir articulo</h3>
+<%= form_for(@article, :html => {class: "form", role: "form"}) do |f| %>
+	<% if @article.errors.any? %>
+		<ul>
+			<li>
+				<% @article.errors.full_messages.each do |msg| %>
+					<%= msg %>
+				<% end %>	
+			</li>
+			
+		</ul>
+	<% end %>
+    <%= f.label :title %>
+    <br>
+    <%= f.text_field :title, placeholder: 'Title of article', autofocus: true %>
+    <%= f.label :body %>
+    <br>
+	<%= f.text_area :body, rows: 10, placeholder: "Body of article" %>
+	<br>
+	<%= f.submit "Create Article" %>
+<% end %>
